@@ -1,0 +1,198 @@
+/* CSS CUSTOM PROPERTIES */
+:root {
+    --color-primary: #1A2B4A; /* deep navy */
+    --color-accent: #D4A843; /* gold */
+    --color-light: #F0F4F8;
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+    --transition: all 0.3s ease;
+}
+
+/* GLOBAL STYLES */
+body {
+    font-family: var(--font-body);
+}
+
+.lb-heading {
+    font-family: var(--font-heading);
+}
+
+/* NAVBAR STYLES */
+.lb-navbar {
+    background: white;
+    box-shadow: 0 2px 10px rgba(26,43,74,0.08);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.btn-accent {
+    background: var(--color-accent);
+    color: var(--color-primary);
+    font-weight: 700;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+}
+
+/* RESPONSIVE VIDEO EMBED */
+.video-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9; /* maintains 16:9 at any width */
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* For older browsers without aspect-ratio support: */
+/* Use padding-top: 56.25%; instead of aspect-ratio */
+/* 56.25% = 9/16 × 100 = maintains 16:9 ratio */
+
+/* FEATURE CARDS */
+.feature-card {
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(212,168,67,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* COURSE CARDS */
+.course-card {
+    transition: var(--transition);
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.course-card__img-wrap {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+}
+
+.course-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.course-card:hover .course-card__img {
+    transform: scale(1.05);
+}
+
+.course-level-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+/* MISSION SECTION */
+.mission-section {
+    background: url('../images/classroom-bg.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.mission-overlay {
+    background: rgba(26, 43, 74, 0.82); /* navy 82% opacity */
+    width: 100%;
+}
+
+/* TEAM SECTION */
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+    display: block;
+    margin: 0 auto;
+}
+
+.team-card {
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    background: var(--color-light);
+    transform: translateY(-3px);
+}
+
+.team-social a {
+    color: var(--color-primary);
+    transition: color 0.2s;
+}
+
+.team-social a:hover {
+    color: var(--color-accent);
+}
+
+/* FOOTER */
+.lb-footer {
+    background: var(--color-primary);
+}
+
+.lb-footer-links li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.lb-footer-links a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+}
+
+.lb-footer-links a:hover {
+    color: var(--color-accent);
+}
+
+.footer-social {
+    color: rgba(255,255,255,0.65);
+    font-size: 1.2rem;
+}
+
+.footer-social:hover {
+    color: var(--color-accent);
+}

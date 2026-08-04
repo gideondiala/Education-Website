@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrol Now - LearnBridge Academy</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class='navbar navbar-expand-md navbar-light lb-navbar sticky-top'>
+        <div class='container'>
+            <a class='navbar-brand' href='index.html'>
+                <i class='fa-solid fa-graduation-cap me-2 text-accent'></i>
+                <span class='fw-bold'>Learn<span class='text-accent'>Bridge</span></span>
+            </a>
+            <button class='navbar-toggler' type="button" data-bs-toggle='collapse' data-bs-target='#lb-nav'>
+                <span class='navbar-toggler-icon'></span>
+            </button>
+            <div class='collapse navbar-collapse' id='lb-nav'>
+                <ul class='navbar-nav ms-auto align-items-md-center gap-2'>
+                    <li class='nav-item'><a class='nav-link' href='index.html'>Home</a></li>
+                    <li class='nav-item'><a class='nav-link' href='courses.html'>Courses</a></li>
+                    <li class='nav-item'><a class='nav-link' href='about.html'>About</a></li>
+                    <li class='nav-item ms-md-2'>
+                        <a href='enrol.html' class='btn btn-accent'>Enrol Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FORM HEADER -->
+    <section class='py-4 bg-primary text-white'>
+        <div class='container'>
+            <h1 class='mb-2'>Enrol Now</h1>
+            <p class='lead mb-0'>Start your learning journey with LearnBridge Academy today.</p>
+        </div>
+    </section>
+
+    <!-- ENROLMENT FORM -->
+    <section class='py-5'>
+        <div class='container'>
+            <div class='row justify-content-center'>
+                <div class='col-lg-8'>
+                    <form id='enrol-form'>
+                        <!-- SECTION 1 — Personal Details -->
+                        <fieldset class='form-section mb-4'>
+                            <legend class='h5 fw-bold border-bottom pb-2 mb-3'>
+                                <i class='fa-solid fa-user me-2 text-accent'></i>Personal Details
+                            </legend>
+                            <div class='row g-3'>
+                                <div class='col-md-6'>
+                                    <label for='first-name' class='form-label'>First Name *</label>
+                                    <input type='text' class='form-control' id='first-name' required>
+                                    <div class='invalid-feedback'>First name is required.</div>
+                                </div>
+                                <div class='col-md-6'>
+                                    <label for='last-name' class='form-label'>Last Name *</label>
+                                    <input type='text' class='form-control' id='last-name' required>
+                                    <div class='invalid-feedback'>Last name is required.</div>
+                                </div>
+                                <div class='col-md-6'>
+                                    <label for='enrol-email' class='form-label'>Email Address *</label>
+                                    <input type='email' class='form-control' id='enrol-email' required>
+                                    <div class='invalid-feedback'>Please enter a valid email.</div>
+                                </div>
+                                <div class='col-md-6'>
+                                    <label for='phone' class='form-label'>Phone Number</label>
+                                    <input type='tel' class='form-control' id='phone' placeholder='+233 XX XXX XXXX'>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- SECTION 2 — Course Selection -->
+                        <fieldset class='form-section mb-4'>
+                            <legend class='h5 fw-bold border-bottom pb-2 mb-3'>
+                                <i class='fa-solid fa-book me-2 text-accent'></i>Course Selection
+                            </legend>
+                            <div class='mb-3'>
+                                <label for='course-select' class='form-label'>Select a Course *</label>
+                                <select class='form-select' id='course-select' required>
+                                    <option value=''>Choose a course...</option>
+                                    <option value='biology'>Introduction to Biology</option>
+                                    <option value='chemistry'>Chemistry Fundamentals</option>
+                                    <option value='literature'>English Literature</option>
+                                    <option value='history'>History of Ghana</option>
+                                    <option value='programming'>Introduction to Programming</option>
+                                    <option value='webdev'>Web Development Basics</option>
+                                </select>
+                                <div class='invalid-feedback'>Please select a course.</div>
+                            </div>
+                        </fieldset>
+
+                        <!-- SECTION 3 — Terms -->
+                        <fieldset class='form-section mb-4'>
+                            <legend class='h5 fw-bold border-bottom pb-2 mb-3'>
+                                <i class='fa-solid fa-file-contract me-2 text-accent'></i>Terms & Conditions
+                            </legend>
+                            <div class='form-check'>
+                                <input class='form-check-input' type='checkbox' id='terms' required>
+                                <label class='form-check-label' for='terms'>
+                                    I agree to the Terms of Service and Privacy Policy *
+                                </label>
+                                <div class='invalid-feedback'>You must agree to continue.</div>
+                            </div>
+                        </fieldset>
+
+                        <button type='submit' class='btn btn-accent btn-lg w-100 mt-4'>
+                            <i class='fa-solid fa-graduation-cap me-2'></i>Complete Enrolment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class='lb-footer py-5'>
+        <div class='container'>
+            <div class='row g-4 mb-4'>
+                <div class='col-12 col-md-4'>
+                    <h5 class='fw-bold text-white mb-3'>
+                        <i class='fa-solid fa-graduation-cap me-2' style='color:var(--color-accent)'></i>
+                        LearnBridge Academy
+                    </h5>
+                    <p class='text-white small'>Quality online education for secondary school students across West Africa.</p>
+                    <div class='d-flex gap-3 mt-3'>
+                        <a href='#' class='footer-social' aria-label='LearnBridge Facebook'>
+                            <i class='fa-brands fa-facebook'></i>
+                        </a>
+                        <a href='#' class='footer-social' aria-label='LearnBridge Instagram'>
+                            <i class='fa-brands fa-instagram'></i>
+                        </a>
+                        <a href='#' class='footer-social' aria-label='LearnBridge YouTube'>
+                            <i class='fa-brands fa-youtube'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class='col-6 col-md-2'>
+                    <h6 class='text-white fw-bold mb-3'>Courses</h6>
+                    <ul class='lb-footer-links'>
+                        <li><a href='courses.html'>Browse All</a></li>
+                        <li><a href='courses.html'>Science</a></li>
+                        <li><a href='courses.html'>Arts</a></li>
+                        <li><a href='courses.html'>Technology</a></li>
+                    </ul>
+                </div>
+                <div class='col-6 col-md-2'>
+                    <h6 class='text-white fw-bold mb-3'>Company</h6>
+                    <ul class='lb-footer-links'>
+                        <li><a href='about.html'>About Us</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
+                        <li><a href='#'>Careers</a></li>
+                    </ul>
+                </div>
+                <div class='col-12 col-md-4'>
+                    <h6 class='text-white fw-bold mb-3'>Stay Updated</h6>
+                    <div class='input-group'>
+                        <input type='email' class='form-control' placeholder='Your email'>
+                        <button class='btn btn-accent'>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr style='border-color:rgba(255,255,255,0.1)'>
+            <p class='text-white text-center mb-0 small'>
+                &copy; <span id='lb-year'></span> LearnBridge Academy. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP MODAL -->
+    <div class='modal fade' id='enrol-confirm-modal' tabindex='-1' aria-labelledby='enrolConfirmLabel' aria-hidden='true'>
+        <div class='modal-dialog modal-dialog-centered'>
+            <div class='modal-content'>
+                <div class='modal-body text-center py-5'>
+                    <i class='fa-solid fa-circle-check fa-4x text-success mb-4'></i>
+                    <h4 class='fw-bold mb-2'>Enrolment Confirmed!</h4>
+                    <p class='text-muted'>Thank you for enrolling. Check your email for your course access details within 24 hours.</p>
+                    <p class='fw-bold text-primary' id='modal-course-name'></p>
+                    <button class='btn btn-primary mt-3' data-bs-dismiss='modal'>
+                        <i class='fa-solid fa-home me-2'></i>Back to Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
